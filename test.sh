@@ -1,0 +1,1 @@
+DISPLAY=:0 xterm -e python main.py ../cert-mgr/{makeCA,makecert}.sh ../nightingale/{Dockerfile,main.py,patch.patch,requirements.txt,static/index.html,static/main.js} ../wendt/{main.py,readme.md} ../can-util-scripts/{get-all-function-codes.py,get-all-ids.py,mkvcan.sh,readme.md,set-driver-mcp2515a.sh,set-driver-mcp251x.sh,start-can0-cap.sh}
