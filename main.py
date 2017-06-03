@@ -7,6 +7,11 @@ def delay_print(s):
         sys.stdout.write( '%s' % c )
         sys.stdout.flush()
         time.sleep(float(1)/float(60))
+
+if sys.argv[1:] == []:
+    print('No files listed')
+    sys.exit(-1)
+
 while True:
     for fName in sys.argv[1:]:
         f=open(fName)
