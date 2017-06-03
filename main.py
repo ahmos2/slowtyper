@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import time
 import sys
+import argparse
 
 def delay_print(s):
     for c in s:
@@ -8,12 +9,12 @@ def delay_print(s):
         sys.stdout.flush()
         time.sleep(float(1)/float(60))
 
-if sys.argv[1:] == []:
-    print('No files listed')
-    sys.exit(-1)
+parser = argparse.ArgumentParser(description='Type out files slowly')
+parser.add_argument('files', metavar='filename', type=str, nargs='+', help='Files to print out')
+args = parser.parse_args()
 
 while True:
-    for fName in sys.argv[1:]:
+    for fName in args.files:
         f=open(fName)
         delay_print(f.read())
         f.close()
